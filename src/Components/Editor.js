@@ -11,13 +11,16 @@ class Editor extends Component{
     this.setState({text : event.target.value})
   }
   render(){
-    let display = {margin:"10em 20em"}
+    let display = {margin:"10% 10%"}
     return(
-      <div style={display}>
-      <h2>Editor</h2>
-      <textarea value={this.state.text} onChange={this.handleChange} />
-      <Preview name={this.state.text} />
+      <div>
+        <div style={display}>
+          <h2>Editor</h2>
+          <textarea id="editor" value={this.state.text} onChange={this.handleChange} />
+        </div>
+        <Preview name={this.state.text} />
       </div>
+
     )
   }
 }

@@ -6,11 +6,11 @@ class Preview extends Component{
     super();
   }
   render(){
-    let display = {marginLeft:"20em"}
+    let display = {margin:"-18.5% 55%", }
     return(
         <div style={display}>
         <h2>Preview</h2>
-        <textarea value={this.props.name}/>
+        <textarea id="preview" value={this.props.name}/>
         </div>
     )
   }
