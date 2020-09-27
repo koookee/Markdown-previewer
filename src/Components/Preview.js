@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
 
+let marked = require("marked");
 
 class Preview extends Component{
   constructor(){
     super();
   }
   render(){
-    let display = {margin:"-18.5% 55%", }
+    let display = {margin:"-17.7% 55%"}
     return(
         <div style={display}>
-        <h2>Preview</h2>
-        <textarea id="preview" value={this.props.name}/>
+          <h2>Preview</h2>
+          <div id="preview" dangerouslySetInnerHTML = {{__html:marked(this.props.name)}}>
+          </div>
         </div>
     )
   }

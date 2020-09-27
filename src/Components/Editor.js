@@ -2,15 +2,17 @@ import React, {Component} from "react";
 import Preview from './Preview.js'
 
 class Editor extends Component{
+
   constructor(){
     super();
-    this.state = {text:"Lorem Ipsum"}
+    this.state = {text:"# Hello"}
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event){
     this.setState({text : event.target.value})
   }
   render(){
+    let tex = "# he";
     let display = {margin:"10% 10%"}
     return(
       <div>
