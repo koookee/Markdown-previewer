@@ -1,0 +1,9 @@
+.preview{
+  /*Not working*/
+  blockquote{
+    border-left: 3px solid #224b4b;
+    color: #224b4b;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+}

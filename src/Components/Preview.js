@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-
+import styles from '../CSS/preview.module.css';
 let marked = require("marked");
-
+marked.setOptions({
+  breaks: true
+})
 class Preview extends Component{
   constructor(){
     super();
@@ -12,7 +14,7 @@ class Preview extends Component{
         <div style={{backgroundColor:""}}>
           <h2>Preview</h2>
           <div style={{backgroundColor:"", borderStyle:"solid"}}>
-            <div id="preview" dangerouslySetInnerHTML = {{__html:marked(this.props.name)}}>
+            <div id="preview" class={styles.preview} dangerouslySetInnerHTML = {{__html:marked(this.props.name)}}>
             </div>
           </div>
         </div>
