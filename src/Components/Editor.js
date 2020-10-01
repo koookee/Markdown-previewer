@@ -4,7 +4,6 @@ import Preview from './Preview.js'
 let startingText = `
 # Welcome to my React Markdown Previewer!
 ## You can add subheaders
-And [links](https://www.freecodecamp.com)
 Here's some code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
@@ -33,9 +32,9 @@ Your content can | be here, and it | can be here....
 And here. | Okay. | I think we get it.
 
 - And of course there are lists.
-- Some are bulleted.
- - With different indentation levels.
-    - That look like this.
+ - Some are bulleted.
+   - With different indentation levels.
+     - That look like this.
 
 
 1. And there are numbererd lists too.
@@ -55,7 +54,7 @@ class Editor extends Component{
     this.setState({text : event.target.value})
   }
   render(){
-    let display = {display:"flex",margin:"2em 2em",justifyContent:"space-around",borderStyle:"solid"}
+    let display = {display:"flex",margin:"2em 2em",justifyContent:"space-around",borderStyle:"solid",backgroundColor:"#f6f6f6"}
     return(
       <div style={display}>
         <div>
