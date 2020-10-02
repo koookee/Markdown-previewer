@@ -9,13 +9,11 @@ class Preview extends Component{
     super();
   }
   render(){
-
-    let display = {margin:"-17.7% 55%"}
     return(
-        <div style={{backgroundColor:""}}>
+        <div className={styles.preview}>
           <h2>Preview</h2>
-          <div style={{backgroundColor:"", borderStyle:"solid"}}>
-            <div id="preview" className={styles.preview} dangerouslySetInnerHTML = {{__html:marked(this.props.name)}}>
+          <div style={{borderStyle:"solid"}}>
+            <div id="preview" dangerouslySetInnerHTML = {{__html:marked(this.props.name)}}>
             </div>
           </div>
         </div>

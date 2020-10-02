@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Preview from './Preview.js'
+import styles from '../CSS/preview.module.css';
 
 let startingText = `
 # Welcome to my React Markdown Previewer!
@@ -54,12 +55,14 @@ class Editor extends Component{
     this.setState({text : event.target.value})
   }
   render(){
-    let display = {display:"flex",margin:"2em 2em",justifyContent:"space-around",borderStyle:"solid",backgroundColor:"#f6f6f6"}
+    let flexDisplay = {display:"flex",margin:"2em 2em",justifyContent:"space-around"
+    ,borderStyle:"solid",backgroundColor:"#f6f6f6",flexWrap:"wrap"}
     return(
-      <div style={display}>
-        <div>
+      <div style={flexDisplay}>
+        <div className={styles.textareaClass}>
           <h2>Editor</h2>
-          <textarea id="editor" rows="30" cols="50" value={this.state.text} onChange={this.handleChange} />
+          <textarea id="editor" rows="30" cols="50" value={this.state.text} onChange={this.handleChange}
+          style={{borderStyle:"solid black",borderWidth:"thick"}} />
         </div>
         <Preview name={this.state.text} />
       </div>
